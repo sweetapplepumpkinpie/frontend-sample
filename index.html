@@ -353,7 +353,7 @@
             Please only change what you need to from here down
           -->
           <!-- Page Title & Breadcrumbs -->
-          <div class="row m-3 mt-4 ms-5">
+          <section class="container my-5">
 
             <ol class="px-0 pt-1 pb-0 mb-1 bg-transparent breadcrumb me-sm-6 me-5 text-black opacity-7">
               <li class="text-sm breadcrumb-item" >
@@ -361,99 +361,89 @@
               </li>
             </ol>
 
-            <h4>Change Permissions on 'Home' folder </h4>
+            <h1 class="text-2xl mb-4">Change Permissions on 'Home' folder </h1>
 
-          </div>
+          </section>
           <!-- End Page title and Breadcrumbs -->
 
 
+          <section class="container">
+            <form method="POST" class="row">
+              <input type="hidden" name="csrfmiddlewaretoken" value="HIlaM8LKrPQUw1u3JrMPfddeuWqenIwyPaDkWH9pxh1sT8amoB1QTAfuqRhqJgMd">
+              <div class="col-12">
+                <fieldset class="card border shadow-xs pb-0 p-3 d-flex flex-column gap-3">
+                  <legend class="text-lg">
+                  <i>
+                    Giving a user access to this folder will give them
+                    this access to all contracts and all sub-folders within this folder
+                  </i>
+                  </legend>
+                  <div>
+                    <h6 class="font-weight-semibold text-lg">Owner permissions</h6>
+                    <label class="text-sm text-secondary mb-2">Users added to this list will have complete access to the <i>Home </i>folder.</label>
+                    <select name="owners" class="permission-select w-100" name="states[]" multiple="multiple">
 
-          <form method="POST">
-            <input type="hidden" name="csrfmiddlewaretoken" value="HIlaM8LKrPQUw1u3JrMPfddeuWqenIwyPaDkWH9pxh1sT8amoB1QTAfuqRhqJgMd">
-            <div class="bg-gray-100 main-content position-relative max-height-vh-100 h-100">
-              <div class="container py-3 my-3">
-                <div class="row mt-3">
-                  <div class="col-12">
-                    <div class="card border shadow-xs h-100">
-                      <div class="card-header pb-0 p-3">
+                      <option value="1">john.smith@example.com</option>
+                      <option value="2">sarah.jones@example.com</option>
+                      <option value="3">james.brown@example.com</option>
+                      <option value="4">linda.taylor@example.com</option>
+                      <option value="5">robert.wilson@example.com</option>
+                      <option value="6">jennifer.johnson@example.com</option>
+                      <option value="7">michael.miller@example.com</option>
+                      <option value="8">elizabeth.moore@example.com</option>
+                      <option value="9">william.davis@example.com</option>
+                      <option value="10">emily.williams@example.com</option>
 
-                        <p>
-                        <i>
-                          Giving a user access to this folder will give them
-                          this access to all contracts and all sub-folders within this folder
-                        </i>
-                        </p>
-                        <h6 class="mb-0 font-weight-semibold text-lg">Owner permissions</h6>
-                        <p class="text-sm mb-1">Users added to this list will have complete access to the <i>Home </i>folder.</p>
-                        <div class="py-4">
-                          <select name="owners" class="permission-select w-100" name="states[]" multiple="multiple">
-
-                            <option value="1">john.smith@example.com</option>
-                            <option value="2">sarah.jones@example.com</option>
-                            <option value="3">james.brown@example.com</option>
-                            <option value="4">linda.taylor@example.com</option>
-                            <option value="5">robert.wilson@example.com</option>
-                            <option value="6">jennifer.johnson@example.com</option>
-                            <option value="7">michael.miller@example.com</option>
-                            <option value="8">elizabeth.moore@example.com</option>
-                            <option value="9">william.davis@example.com</option>
-                            <option value="10">emily.williams@example.com</option>
-
-                          </select>
-                        </div>
-
-                        <h6 class="mb-0 font-weight-semibold text-lg">Editor permissions</h6>
-                        <p class="text-sm mb-1">Users added to this list will be able to read, update and delete this folder and its contents.</p>
-                        <div class="py-4">
-                          <select name="editors" class="permission-select w-100" name="states[]" multiple="multiple">
-
-                            <option value="1">john.smith@example.com</option>
-                            <option value="2">sarah.jones@example.com</option>
-                            <option value="3">james.brown@example.com</option>
-                            <option value="4">linda.taylor@example.com</option>
-                            <option value="5">robert.wilson@example.com</option>
-                            <option value="6">jennifer.johnson@example.com</option>
-                            <option value="7">michael.miller@example.com</option>
-                            <option value="8">elizabeth.moore@example.com</option>
-                            <option value="9">william.davis@example.com</option>
-                            <option value="10">emily.williams@example.com</option>
-
-                          </select>
-                          </select>
-                        </div>
-
-                        <h6 class="mb-0 font-weight-semibold text-lg">Reader permissions</h6>
-                        <p class="text-sm mb-1">Users added to this list will only be able to read this folder and its content.</p>
-                        <div class="py-4">
-                          <select name="readers" class="permission-select w-100" 
-                                  name="states[]" multiple="multiple" allowClear="true">
-
-                            <option value="1">john.smith@example.com</option>
-                            <option value="2">sarah.jones@example.com</option>
-                            <option value="3">james.brown@example.com</option>
-                            <option value="4">linda.taylor@example.com</option>
-                            <option value="5">robert.wilson@example.com</option>
-                            <option value="6">jennifer.johnson@example.com</option>
-                            <option value="7">michael.miller@example.com</option>
-                            <option value="8">elizabeth.moore@example.com</option>
-                            <option value="9">william.davis@example.com</option>
-                            <option value="10">emily.williams@example.com</option>
-
-                          </select>
-                        </div>
-
-                        <div class="my-3 text-end">
-                          <button class="btn btn-primary">Save</button>
-                        </div>
-                      </div>
-
-                    </div>
+                    </select>
                   </div>
-                </div>
-              </div>
-            </div>
-          </form>
 
+                  <div>
+                    <h6 class="font-weight-semibold text-lg">Editor permissions</h6>
+                    <label class="text-sm text-secondary mb-2">Users added to this list will be able to read, update and delete this folder and its contents.</label>
+                    <select name="editors" class="permission-select w-100" name="states[]" multiple="multiple">
+
+                      <option value="1">john.smith@example.com</option>
+                      <option value="2">sarah.jones@example.com</option>
+                      <option value="3">james.brown@example.com</option>
+                      <option value="4">linda.taylor@example.com</option>
+                      <option value="5">robert.wilson@example.com</option>
+                      <option value="6">jennifer.johnson@example.com</option>
+                      <option value="7">michael.miller@example.com</option>
+                      <option value="8">elizabeth.moore@example.com</option>
+                      <option value="9">william.davis@example.com</option>
+                      <option value="10">emily.williams@example.com</option>
+
+                    </select>
+                    </select>
+                  </div>
+
+                  <div>
+                    <h6 class="font-weight-semibold text-lg">Reader permissions</h6>
+                    <label class="text-sm text-secondary mb-2">Users added to this list will only be able to read this folder and its content.</label>
+                    <select name="readers" class="permission-select w-100" 
+                            name="states[]" multiple="multiple" allowClear="true">
+
+                      <option value="1">john.smith@example.com</option>
+                      <option value="2">sarah.jones@example.com</option>
+                      <option value="3">james.brown@example.com</option>
+                      <option value="4">linda.taylor@example.com</option>
+                      <option value="5">robert.wilson@example.com</option>
+                      <option value="6">jennifer.johnson@example.com</option>
+                      <option value="7">michael.miller@example.com</option>
+                      <option value="8">elizabeth.moore@example.com</option>
+                      <option value="9">william.davis@example.com</option>
+                      <option value="10">emily.williams@example.com</option>
+
+                    </select>
+                  </div>
+
+                  <div class="my-3 text-end">
+                    <button class="btn btn-primary">Save</button>
+                  </div>
+                </fieldset>
+              </div>
+            </form>
+          </section>
           <!-- 
             !! END !!
             Please do not change anything below this line
